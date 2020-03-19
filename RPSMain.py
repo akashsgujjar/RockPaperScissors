@@ -12,12 +12,21 @@ if __name__ == "__main__":
 
 def compMove():
     value = randint(1, 3)
+    comp = ''
     if value == 1:
-        print "Computer says Rock"
+        comp = "Rock"
     if value == 2:
-        print "Computer says Paper"
+        comp = "Paper"
     if value == 3:
-        print "Computer says Scissors"
+        comp = "Scissors"
+    playerMove(comp)
 
 
-compMove()
+def playerMove(comp):
+    user = raw_input("Rock, Paper, or Scissors")
+    gameTime(user, comp)
+
+
+def gameTime(user, comp):
+    if user == 'Rock' and comp == "Scissors":
+        print ("User Wins")
