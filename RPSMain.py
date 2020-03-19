@@ -23,10 +23,26 @@ def compMove():
 
 
 def playerMove(comp):
-    user = raw_input("Rock, Paper, or Scissors")
+    user = raw_input("Rock, Paper, or Scissors ")
     gameTime(user, comp)
 
 
 def gameTime(user, comp):
+    print ("Computer picked " + comp)
     if user == 'Rock' and comp == "Scissors":
         print ("User Wins")
+    if user == 'Paper' and comp == "Scissors":
+        print ("Computer Wins")
+    if user == 'Rock' and comp == "Paper":
+        print ("Computer Wins")
+    if user == 'Paper' and comp == "Rock":
+        print ("User Wins")
+    if user == 'Scissors' and comp == "Rock":
+        print ("Computer Wins")
+    if user == 'Scissors' and comp == "Paper":
+        print ("User Wins")
+    if user == comp:
+        print ("Draw")
+
+
+compMove()
