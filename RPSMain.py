@@ -45,4 +45,11 @@ def gameTime(user, comp):
         print ("Draw")
 
 
-compMove()
+def repeatGame():
+    x = 1
+    while x < 6:
+        compMove()
+        x += 1
+
+
+repeatGame()
